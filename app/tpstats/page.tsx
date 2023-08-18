@@ -1,6 +1,7 @@
 'use client'
 import { useEffect, useState } from "react";
 import { supabase } from "../utils/supabase"
+import { Table, TableHeader, TableBody, TableColumn, TableRow, TableCell} from "@nextui-org/react";
 
 export default function TrashPandaStats() {
   const [soundCounts, setSoundCounts] = useState<any[]>([]);
@@ -31,11 +32,20 @@ export default function TrashPandaStats() {
   }
 
   return (
-    <div>
-      { soundCounts?.map( (soundData) => (
-        <p key={soundData.sound_name}>{soundData.sound_name} played {soundData.times_played} times.</p>
-      ))}
-    </div>
+      <Table aria-label="TP Sounds table" className="purple-dark text-foreground bg-background" >
+      <TableHeader>
+        <TableColumn>Sound Name</TableColumn>
+        <TableColumn>Times Played</TableColumn>
+      </TableHeader>
+      <TableBody>
+        { soundCounts?.map( (soundData) => (
+          <TableRow key={soundData.sound_name}>
+            <TableCell>{soundData.sound_name}</TableCell>
+            <TableCell>{soundData.times_played}</TableCell>
+          </TableRow>
+        ))}
+      </TableBody>
+      </Table>
   )
 }
 
