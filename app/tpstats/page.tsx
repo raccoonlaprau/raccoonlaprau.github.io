@@ -33,7 +33,7 @@ export default function TrashPandaStats() {
   return (
     <div>
       { soundCounts?.map( (soundData) => (
-        <p>{soundData.sound_name} played {soundData.times_played} times.</p>
+        <p key={soundData.sound_name}>{soundData.sound_name} played {soundData.times_played} times.</p>
       ))}
     </div>
   )
