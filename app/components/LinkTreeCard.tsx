@@ -20,7 +20,7 @@ export default function LinkTreeCard (props: LinkTreeCardProps) {
         isBlurred
       >
         <CardBody
-          className="flex flex-row text-center items-center justify-center content-center"
+          className="flex flex-row text-center items-center justify-center content-center bg-zinc-900"
         >
           <props.icon
             className={`max-h-8 w-8 object-contain opacity-100 ${fillColor} justify-self-start`}
