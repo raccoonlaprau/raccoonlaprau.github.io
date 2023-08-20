@@ -6,8 +6,24 @@ import { Providers } from './providers'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Raccoon Bees!',
+  title: 'Laprau - Raccoon Bees!',
   description: 'Welcome to the hive.',
+  openGraph: {
+    title: 'Laprau - Raccoon Bees!',
+    description: 'Welcome to the hive.',
+    type: "website",
+    url: "https://raccoons.buzz",
+    images: [
+      { url: 'https://raw.githubusercontent.com/raccoonlaprau/raccoonlaprau.github.io/main/public/images/lap-ava.jpg' }
+    ]
+  },
+  twitter: {
+    title: 'Laprau - Raccoon Bees!',
+    description: 'Welcome to the hive.',
+    images: [
+      { url: 'https://raw.githubusercontent.com/raccoonlaprau/raccoonlaprau.github.io/main/public/images/lap-ava.jpg' }
+    ]
+  }
 }
 
 export default function RootLayout({
@@ -16,8 +32,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className='dark text-foreground bg-background'>
+      <body>
         <Providers>
           {children}
         </Providers>

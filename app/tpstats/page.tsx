@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from "react";
 import { supabase } from "../utils/supabase"
-import { Table, TableHeader, TableBody, TableColumn, TableRow, TableCell} from "@nextui-org/react";
+import { Table, TableHeader, TableBody, TableColumn, TableRow, TableCell, Spinner} from "@nextui-org/react";
 
 export default function TrashPandaStats() {
   const [soundCounts, setSoundCounts] = useState<any[]>([]);
@@ -28,8 +28,9 @@ export default function TrashPandaStats() {
   }, []);
 
   if (loading) {
-    return <div>Fetching data...</div>;
+    return <Spinner className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"/>;
   }
+  
 
   return (
       <Table aria-label="TP Sounds table" className="purple-dark text-foreground bg-background" >
