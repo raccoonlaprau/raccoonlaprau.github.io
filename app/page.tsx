@@ -10,7 +10,7 @@ import lapAvatar from '../public/images/lap-ava.jpg'
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-4 items-center dark mt-20 lg:mx-[30%] mx-[10%]">
+    <div className="flex flex-col gap-4 items-center dark mt-8 lg:mx-[30%] mx-[10%]">
       <Image
         as={NextImage}
         src="/images/lap-ava.jpg"
