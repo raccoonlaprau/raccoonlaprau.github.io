@@ -5,6 +5,8 @@ import tumblrIcon from '../public/images/tumblr.svg'
 import githubIcon from '../public/images/github.svg'
 import twitterIcon from '../public/images/twitter.svg'
 import blueskyIcon from '../public/images/bluesky.svg'
+import twitchIcon from '../public/images/twitch.svg'
+import kofiIcon from '../public/images/kofi.svg'
 import LinkTreeCard from "./components/LinkTreeCard"
 import lapAvatar from '../public/images/lap-ava.jpg'
 
@@ -26,9 +28,21 @@ export default function Home() {
         fillColor="fill-primary-400"
       />
       <LinkTreeCard
+        icon={twitchIcon}
+        destination="https://www.twitch.tv/laprau"
+        text="Twitch"
+        fillColor="fill-purple-400"
+      />
+      <LinkTreeCard
         icon={tumblrIcon}
         destination="https://laprau.tumblr.com/"
         text="Tumblr"
+      />
+      <LinkTreeCard
+        icon={kofiIcon}
+        destination="https://ko-fi.com/laprau"
+        text="Ko-fi"
+        fillColor="fill-white-400"
       />
       <LinkTreeCard
         icon={blueskyIcon}
